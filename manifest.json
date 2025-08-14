@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "AI Quiz Solver",
+  "version": "0.4",
+  "description": "An extension to analyze and answer questions on a webpage.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["key.txt"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
